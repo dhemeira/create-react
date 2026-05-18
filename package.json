@@ -1,10 +1,10 @@
 {
   "name": "@dhemeira/create-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scaffold a React/Vite starter for dhemeira",
   "type": "module",
   "bin": {
-    "dhemeira-create-react": "./cli.js"
+    "dhemeira-create-react": "cli.js"
   },
   "files": [
     "cli.js",
@@ -19,5 +19,20 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "main": "cli.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhemeira/create-react.git"
+  },
+  "author": "dhemeira (https://github.com/dhemeira)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhemeira/create-react/issues"
+  },
+  "homepage": "https://github.com/dhemeira/create-react#readme"
 }
