@@ -1,0 +1,23 @@
+{
+  "name": "@dhemeira/create-react",
+  "version": "1.0.0",
+  "description": "Scaffold a React/Vite starter for dhemeira",
+  "type": "module",
+  "bin": {
+    "dhemeira-create-react": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.4.0",
+    "degit": "^2.8.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
