@@ -1,6 +1,6 @@
 {
   "name": "@dhemeira/create-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scaffold a React/Vite starter for dhemeira",
   "type": "module",
   "bin": {
