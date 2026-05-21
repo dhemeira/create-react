@@ -1,4 +1,4 @@
-# @dhemeira/create-react
+# [@dhemeira/create-react](https://www.npmjs.com/package/@dhemeira/create-react)
 
 An interactive command-line interface to instantly scaffold a new project from the [@dhemeira/react-ts-starter](https://github.com/dhemeira/react-ts-starter) starter template.
 
