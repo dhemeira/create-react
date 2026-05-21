@@ -36,6 +36,16 @@ export async function scaffold({ appName, shouldInstall, shouldGit, spinner }) {
     // Silence error if template doesn't have a package.json
   }
 
+  // Update README.md title to project name
+  const readmePath = path.join(targetDir, 'README.md');
+  try {
+    const readme = await fs.readFile(readmePath, 'utf8');
+    const updated = readme.replace(/^# .+/m, `# ${appName}`);
+    await fs.writeFile(readmePath, updated, 'utf8');
+  } catch (err) {
+    // Silence error if template doesn't have a README.md
+  }
+
   if (shouldInstall) {
     const pkgManager = getPackageManager();
     const installCmd = pkgManager === 'yarn' ? 'yarn' : `${pkgManager} install`;
