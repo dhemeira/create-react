@@ -48,12 +48,14 @@ export async function scaffold({ appName, shouldInstall, shouldGit, spinner }) {
 
   if (shouldInstall) {
     const pkgManager = getPackageManager();
-    const installCmd = pkgManager === 'yarn' ? 'yarn' : `${pkgManager} install`;
+    const installCmd = `${pkgManager} install`;
+    const prepareCmd = `${pkgManager} run prepare`;
 
     spinner.message(`Installing dependencies using ${pkgManager}...`);
     await new Promise((resolve) => setTimeout(resolve, 50));
     try {
       execSync(installCmd, { cwd: targetDir, stdio: 'ignore' });
+      execSync(prepareCmd, { cwd: targetDir, stdio: 'ignore' });
     } catch (e) {
       // Fallback if execution fails
     }
